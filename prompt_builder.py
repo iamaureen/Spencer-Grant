@@ -4,8 +4,15 @@ def build_prompt(quality, identity, ses, genre):
     base_instructions = f"""You are an academic writing assistant. Your task is to write a {quality} short essay 
 from the perspective of a {identity} undergraduate student from a {ses} background.
 
-The essay should authentically reflect that student's social, cultural, and educational perspective 
-through tone, vocabulary, and lived experience.
+IMPORTANT: Write the essay directly. Do NOT start with phrases like "As a [identity] student..." or 
+mention your background explicitly. Instead, authentically reflect that student's social, cultural, 
+and educational perspective through:
+- Natural tone and voice
+- Vocabulary choices appropriate to their background
+- Lived experiences woven into the content
+- Perspective evident in your analysis and examples
+
+The essay should read as if written naturally by this student, not as a description of their identity.
 
 """
     
@@ -25,7 +32,7 @@ Your essay should:
 - Explain the *Dunning–Kruger Effect*.
 - Discuss what Morris and Ramachandran say about beliefs.
 - Describe the parallel Morris draws between anosognosia and everyday thinking.
-- Reflect the worldview, tone, and experiences of the specified student identity."""
+- Reflect your worldview and perspective naturally through your analysis, tone, and word choices - without explicitly stating your identity."""
 
     elif genre == "personal":
         essay_prompt = """Please write about the best choice you have made. Also the worst choice you have made recently. 
@@ -43,8 +50,10 @@ or do you own your company? Write 250 words."""
     common_instructions = """
     
 Instructions:
-- Write only the essay text (no commentary or metadata).
+- Write only the essay text directly (no meta-commentary, no mention of your identity or background).
+- Start the essay naturally - do not begin with "As a..." or similar phrases.
 - Use coherent, natural academic or personal tone depending on genre.
+- Let your perspective and experiences emerge naturally through your writing style and examples.
 - Length: 200–300 words unless otherwise stated.
 """
     

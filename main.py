@@ -76,10 +76,17 @@ if __name__ == '__main__':
     # Define prompt configurations
     prompt_configs = [
         {"quality": "high", "identity": "LatinX", "ses": "low SES", "genre": "educational"},
+        {"quality": "high", "identity": "LatinX", "ses": "high SES", "genre": "educational"},
         {"quality": "low", "identity": "LatinX", "ses": "low SES", "genre": "educational"},
-        {"quality": "high", "identity": "White", "ses": "high SES", "genre": "personal"},
-        {"quality": "low", "identity": "White", "ses": "high SES", "genre": "personal"},
-        {"quality": "high", "identity": "African American", "ses": "middle SES", "genre": "mixed"},
+        {"quality": "low", "identity": "LatinX", "ses": "high SES", "genre": "educational"},
+        {"quality": "high", "identity": "Southern White", "ses": "low SES", "genre": "educational"},
+        {"quality": "high", "identity": "Southern White", "ses": "high SES", "genre": "educational"},
+        {"quality": "low", "identity": "Southern White", "ses": "low SES", "genre": "educational"},
+        {"quality": "low", "identity": "Southern White", "ses": "high SES", "genre": "educational"},
+        {"quality": "high", "identity": "LatinX", "ses": "low SES", "genre": "personal"},
+        {"quality": "high", "identity": "LatinX", "ses": "high SES", "genre": "personal"},
+        {"quality": "low", "identity": "LatinX", "ses": "low SES", "genre": "personal"},
+        {"quality": "low", "identity": "LatinX", "ses": "high SES", "genre": "personal"}
     ]
     
     # Run all prompts and save to Excel
