@@ -90,16 +90,16 @@ if __name__ == '__main__':
         #RUN MODELS AT A TIME
         # (ModelConfig(name="gpt4o", provider="openai",
         #              access_token=TEST_LLMs_API_ACCESS_TOKEN,
-        #              api_url=TEST_LLMs_REST_API_URL), "gpt4o"),
+        #              api_url=TEST_LLMs_REST_API_URL), "gpt4o")
         # (ModelConfig(name="claude4_sonnet", provider="aws",
         #              access_token=TEST_LLMs_API_ACCESS_TOKEN,
-        #              api_url=TEST_LLMs_REST_API_URL), "claude4_sonnet"),
-        (ModelConfig(name="llama3-405b", provider="aws", #did not have access to llama3_3-70b; #llama3-8b - did not produce some results
-                      access_token=TEST_LLMs_API_ACCESS_TOKEN,
-                      api_url=TEST_LLMs_REST_API_URL), "llama3")
-        # (ModelConfig(name="geminiflash2", provider="gcp-deepmind", #did not have access to geminipro
-        #              access_token=TEST_LLMs_API_ACCESS_TOKEN,
-        #              api_url=TEST_LLMs_REST_API_URL), "geminiflash2")
+        #              api_url=TEST_LLMs_REST_API_URL), "claude4_sonnet")
+        # (ModelConfig(name="llama3-405b", provider="aws", #did not have access to llama3_3-70b; #llama3-8b - did not produce some results
+        #               access_token=TEST_LLMs_API_ACCESS_TOKEN,
+        #               api_url=TEST_LLMs_REST_API_URL), "llama3")
+        (ModelConfig(name="geminiflash3_5", provider="gcp-deepmind", #did not have access to geminipro/geminiflash2 deprecated
+                     access_token=TEST_LLMs_API_ACCESS_TOKEN,
+                     api_url=TEST_LLMs_REST_API_URL), "geminiflash3_5")
         #TODO: add the two other models
 
     ]
@@ -142,7 +142,7 @@ if __name__ == '__main__':
     
     # Run all prompts through all models and save to Excel
 
-    run_prompts_and_save_to_excel(prompt_configs, models, num_runs=10, output_file="Output/llama3-405b_essay_results.xlsx")
+    run_prompts_and_save_to_excel(prompt_configs, models, num_runs=10, output_file="Output/exp1_geminiflash3_5_essay_results.xlsx")
 
     
     print("All prompts completed!")
